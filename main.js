@@ -20,8 +20,14 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
-
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
+})
+
+// Show navbar toggle button
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn')
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
 })
 
 // Handle click on "contact me" button on home
@@ -87,7 +93,6 @@ workBtnContainer.addEventListener('click', (event) => {
     projectContainer.classList.remove('anim-out');
   }, 280);
 });
-
 
 
 
