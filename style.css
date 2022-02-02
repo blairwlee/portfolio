@@ -478,6 +478,27 @@ p {
   /*color: var(--color-blue);*/
 }
 
+/* Arrow up */
+.arrow-up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--animation-duration) ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* For screen width below 768px */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
