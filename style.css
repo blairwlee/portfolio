@@ -155,7 +155,7 @@ p {
   padding: 40px;
   padding-top: 120px;
   text-align: center;
-  background: url(/imgs/home_background.png) center/cover no-repeat;
+  background: url(../imgs/home_background.png) center/cover no-repeat;
 }
 
 .home__avatar {
