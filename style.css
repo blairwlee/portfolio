@@ -40,7 +40,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   cursor: default;
 }
@@ -133,9 +133,8 @@ p {
 }
 
 .navbar__menu__item.active {
-  border-color: var(--color-white);
+  border: 1px solid var(--color-white);
 }
-
 .navbar__menu__item:hover {
   border-color: var(--color-white);
   background-color: var(--color-dark-violet);
@@ -155,14 +154,12 @@ p {
   padding: 40px;
   padding-top: 120px;
   text-align: center;
-  background: url("https://blairwlee.github.io/portfolio/imgs/home_background.png")
+  background: url('https://blairwlee.github.io/portfolio/imgs/home_background.png')
     center/cover no-repeat;
 }
 
 .home__avatar {
   width: 250px;
-  /* border: 2px solid var(--color-light-white);
-  border-radius: 50%; */
 }
 
 .home__title,
@@ -243,7 +240,7 @@ p {
 }
 
 .school img {
-  width: 64px;
+  width: 80px;
 }
 
 .school__description {
@@ -264,63 +261,8 @@ p {
   font-size: var(--font-micro);
 }
 
-/* Skill */
-#skills {
-  background-color: var(--color-light-blue);
-}
-
-.skillset {
-  display: flex;
-  background-color: var(--color-light-gray);
-  color: var(--color-light-white);
-  margin: 20px 0;
-}
-
-.skillset__title {
-  color: var(--color-white);
-}
-
-.skillset__left {
-  flex-basis: 60%;
-  background-color: var(--color-dark-gray);
-  padding: 20px 40px;
-}
-
-.skill {
-  margin-bottom: 32px;
-}
-
-.skill__description {
-  display: flex;
-  justify-content: space-between;
-}
-
-.skill__bar {
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-gray);
-}
-
-.skill__value {
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-blue);
-}
-
-.skillset__right {
-  flex-basis: 40%;
-}
-
-.tools {
-  background-color: var(--color-gray);
-}
-
-.tools,
-.etc {
-  padding: 20px;
-}
-
 /* Work */
+
 .work__categories {
   margin: 40px;
 }
@@ -419,7 +361,7 @@ p {
 }
 
 .project__description h3:after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   left: 50%;
@@ -430,46 +372,8 @@ p {
   background-color: var(--color-dark-white);
 }
 
-/* Testimonial */
-#testimonials {
-  background-color: var(--color-light-white);
-}
-
-.testimonials {
-  margin: 40px;
-}
-
-.testimonial {
-  display: flex;
-  margin: 32px 0;
-}
-
-.testimonial__avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-.testimonial__avatar:nth-child(odd) {
-  margin-right: 40px;
-}
-
-.testimonial__avatar:nth-child(even) {
-  margin-left: 40px;
-}
-
-.testimonial__speech-bubble {
-  padding: 18px;
-  background-color: var(--color-white);
-  border-radius: var(--size-border-radius);
-}
-
-.testimonial__speech-bubble p {
-  color: var(--color-light-gray);
-}
-
-.testimonial__speech-bubble a {
-  color: var(--color-violet);
+.work__popup {
+  z-index: 1;
 }
 
 /* Contact */
@@ -492,11 +396,18 @@ p {
   margin: 24px 0;
 }
 
-.contact__links i {
+.contact__links i,
+.link__blog {
   transition: all var(--animation-duration) ease-in;
 }
 
-.contact__links i:hover {
+.link__blog {
+  width: 48px;
+  transform: translateY(11%);
+}
+
+.contact__links i:hover,
+.link__blog:hover {
   transform: scale(1.1);
   /*color: var(--color-blue);*/
 }
@@ -595,28 +506,9 @@ p {
     flex-grow: 1;
   }
 
-  .testimonial {
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .testimonial__avatar {
-    width: 120px;
-    height: 120px;
-  }
-
-  .testimonial__avatar:nth-child(odd),
-  .testimonial__avatar:nth-child(even) {
-    margin: 0;
-    margin-bottom: 8px;
-  }
-
-  .testimonial__speech-bubble {
-    order: 1;
-  }
-
-  .testimonial__speech-bubble p {
-    font-size: var(--font-small);
+  .link__blog {
+    width: 30px;
+    transform: translateY(11%);
   }
 
   .arrow-up {
